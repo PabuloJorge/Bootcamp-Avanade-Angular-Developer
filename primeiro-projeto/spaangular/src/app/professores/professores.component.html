@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professores</title>
+</head>
+<body>
+    <h1>Professores</h1> 
+
+    <button (click)="exibirTabela()" mat-stroked-button color="primary">Exibir Tabela</button>
+      
+    <table *ngIf="exibeTabela">
+        <tr>
+          <th>Nome</th>
+          <th>Curso</th>
+        </tr>
+        <tr *ngFor="let prof of listaProfessores">
+          <td>{{prof.nome}}</td>
+          <td>{{prof.curso}}</td>
+        </tr>
+      </table>
+</body>
+</html>
